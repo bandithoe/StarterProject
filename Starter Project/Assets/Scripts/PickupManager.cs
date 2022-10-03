@@ -7,7 +7,7 @@ public class PickupManager : MonoBehaviour
     private static PickupManager instance;
     [SerializeField] private GameObject pickupPrefab;
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
         {

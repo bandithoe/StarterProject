@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class PlayerRaycast : MonoBehaviour
 {
+
+    public PlayerWeapon playerWeapon;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             RaycastHit result;
-            bool thereWasHit = Physics.Raycast(transform.position, transform.forward, out result, Mathf.Infinity);
+            bool thereWasHit = Physics.Raycast(playerWeapon.shotPosition.position, transform.forward, out result, Mathf.Infinity);
 
             //This line is not needed for the ray to work, its just a visualization to see the ray
-            Debug.DrawRay(transform.position, transform.forward * 50f, Color.red, 0.05f);
+            Debug.DrawRay(playerWeapon.shotPosition.position, transform.forward * 50f, Color.red, 0.05f);
 
             if (thereWasHit)
             {
                 result.collider.gameObject.GetComponent<MeshRenderer>().material.color = GetRandomColor();
             }
-            //PickupManager.GetInstance()
+            // PickupManager.GetInstance()
         }
     }
 
