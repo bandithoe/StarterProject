@@ -6,6 +6,7 @@ TagManager:
   tags:
   - P1
   - P2
+  - Cube
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - duck
   - 
   - 
   - 

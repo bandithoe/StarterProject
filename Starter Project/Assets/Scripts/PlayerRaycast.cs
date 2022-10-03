@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerRaycast : MonoBehaviour
 {
 
+    public PlayerStats playerStats;
     public PlayerWeapon playerWeapon;
     void Update()
     {
@@ -19,6 +20,7 @@ public class PlayerRaycast : MonoBehaviour
             if (thereWasHit)
             {
                 result.collider.gameObject.GetComponent<MeshRenderer>().material.color = GetRandomColor();
+               // playerStats.GetComponent<PlayerStats>().TakeDamage(20f);
             }
             // PickupManager.GetInstance()
         }
