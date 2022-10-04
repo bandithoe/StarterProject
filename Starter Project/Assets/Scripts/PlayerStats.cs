@@ -25,5 +25,15 @@ public class PlayerStats : MonoBehaviour
     {
         currentHP -= damage;
     }
+    
+    public void GetHeal(float heal)
+    {
+        if (currentHP < maxHP)
+        {
+            currentHP += heal;
+            currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
+        }
+        
+    }
 }
 

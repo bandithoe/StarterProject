@@ -21,10 +21,12 @@ public class Bullet : MonoBehaviour
         }
     }
     
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision specificCollision)
     {
-        if (collision.gameObject.CompareTag("Cube"))
-        {
+        Debug.Log(specificCollision);
+        if (specificCollision.gameObject.CompareTag("Cube"))
+        { 
+            specificCollision.gameObject.GetComponent<PlayerStats>().TakeDamage(20f);
             Destroy(gameObject); 
         }
         
