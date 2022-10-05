@@ -11,8 +11,8 @@ public class CurrentPlayerActive : MonoBehaviour
     [SerializeField] private GameObject playerOne;
     [SerializeField] private GameObject playerTwo;
 
-    private PlayerControls playerOneControls;
-    private PlayerControls playerTwoControls;
+    public PlayerControls playerOneControls;
+    public PlayerControls playerTwoControls;
 
     public static PlayerControls activePlayer;
 

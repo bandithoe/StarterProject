@@ -12,6 +12,7 @@ public class Bullet : MonoBehaviour
     public void Initialize()
     {
         isActive = true;
+        Destroy(gameObject, 3f);
     }
     void Update()
     {
@@ -21,14 +22,10 @@ public class Bullet : MonoBehaviour
         }
     }
     
-    private void OnCollisionEnter(Collision specificCollision)
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(specificCollision);
-        if (specificCollision.gameObject.CompareTag("Cube"))
-        { 
-            specificCollision.gameObject.GetComponent<PlayerStats>().TakeDamage(20f);
-            Destroy(gameObject); 
-        }
-        
+        Debug.Log("collision");
+        collision.gameObject.GetComponent<PlayerStats>().TakeDamage(20f);
+        Destroy(gameObject);
     }
 }
