@@ -15,6 +15,7 @@ public class PlayerWeapon : MonoBehaviour
         {
             GameObject newBullet = Instantiate(bulletPrefab);
             newBullet.transform.position = shotPosition.position;
+            newBullet.transform.rotation = gameObject.transform.rotation;
             newBullet.GetComponent<Bullet>().Initialize();
         }
     } 

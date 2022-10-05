@@ -6,7 +6,11 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     [SerializeField] private float speed = 0f;
+    [SerializeField] private float turnSpeed;
     [SerializeField] private Rigidbody characterBody;
+    private float horizontalInput;
+    private float verticalInput;
+    
 
     void Update()
     {
@@ -17,14 +21,17 @@ public class PlayerControls : MonoBehaviour
 
     private void Move()
     {
-        if (Input.GetAxis("Horizontal") != 0)
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        
+        if (horizontalInput != 0)
         {
-            transform.Translate(Vector3.right * (Time.deltaTime * speed * Input.GetAxis("Horizontal")));
+            transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
         }
 
-        if (Input.GetAxis("Vertical") != 0) 
+        if (verticalInput != 0) 
         {
-            transform.Translate(Vector3.forward * (Time.deltaTime * speed * Input.GetAxis("Vertical")));
+            transform.Translate(Vector3.forward * (Time.deltaTime * speed * verticalInput));
         }
     }
     private void Sprint()

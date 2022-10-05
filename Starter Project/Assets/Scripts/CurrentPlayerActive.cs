@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
@@ -10,32 +11,54 @@ public class CurrentPlayerActive : MonoBehaviour
     [SerializeField] private GameObject playerOne;
     [SerializeField] private GameObject playerTwo;
 
-    private PlayerControls playerControls;
+    private PlayerControls playerOneControls;
+    private PlayerControls playerTwoControls;
+
+    public static PlayerControls activePlayer;
+
     // Start is called before the first frame update
     void Start()
     {
-        playerOne.GetComponent<PlayerControls>().enabled = true;
-        playerTwo.GetComponent<PlayerControls>().enabled = false;
+        playerOneControls = playerOne.GetComponent<PlayerControls>();
+        playerTwoControls = playerTwo.GetComponent<PlayerControls>();
+
+        playerOneControls.enabled = true;
+        playerTwoControls.enabled = false;
+
+        activePlayer = playerOneControls;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Switch();
-    }
-
-    private void Switch()
-    {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            playerOne.GetComponent<PlayerControls>().enabled = true;
-            playerTwo.GetComponent<PlayerControls>().enabled = false;
+            PlayerSwitch();
+        }
+        
+    }
+
+    private void PlayerSwitch()
+    {
+
+        if (activePlayer != playerOneControls)
+        {
+            Debug.Log("player 1 activation");
+            playerOneControls.enabled = true;
+            playerTwoControls.enabled = false;
+
+            activePlayer = playerOneControls;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (activePlayer != playerTwoControls)
         {
-            playerTwo.GetComponent<PlayerControls>().enabled = true;
-            playerOne.GetComponent<PlayerControls>().enabled = false;
+            Debug.Log("player 2 activation");
+            playerOneControls.enabled = false;
+            playerTwoControls.enabled = true;
+
+            activePlayer = playerTwoControls;
         }
+
+        CameraController.CamController.CameraSwitchPlayer(activePlayer.gameObject);
     }
 }
