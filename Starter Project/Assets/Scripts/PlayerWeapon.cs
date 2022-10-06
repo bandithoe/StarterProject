@@ -10,20 +10,19 @@ public class PlayerWeapon : MonoBehaviour
     public GameObject weapon;
     public Transform shotPosition;
 
-
-    void Start()
-    { 
-        weapon.SetActive(false);
-    }
-
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             GameObject newBullet = Instantiate(bulletPrefab);
             newBullet.transform.position = shotPosition.position;
             newBullet.transform.rotation = gameObject.transform.rotation;
             newBullet.GetComponent<Bullet>().Initialize();
         }
-    } 
+    }
+
+    public void ActivateWeapon()
+    {
+        weapon.SetActive(true);
+    }
 }

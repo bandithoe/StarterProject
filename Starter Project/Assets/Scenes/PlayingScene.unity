@@ -433,7 +433,7 @@ PrefabInstance:
     - target: {fileID: 3137400521628752072, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1079055715}
     - target: {fileID: 5654420328828646804, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -493,6 +493,16 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
+--- !u!1 &1079055715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4641351310339609990, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
+  m_PrefabInstance: {fileID: 1002535972}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1174861488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4641351310339609990, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
+  m_PrefabInstance: {fileID: 5654420329207543855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1342872397
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1041,7 +1051,7 @@ PrefabInstance:
     - target: {fileID: 3137400521628752072, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: weapon
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1174861488}
     - target: {fileID: 4909443793696698953, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: weapon
       value: 

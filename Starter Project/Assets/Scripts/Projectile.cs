@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
-
     [SerializeField] private float speed;
     private bool isActive;
 
@@ -18,14 +17,14 @@ public class Bullet : MonoBehaviour
     {
         if (isActive)
         {
-            transform.position += (-transform.forward * speed * Time.deltaTime);
+            transform.position += (transform.forward * speed * Time.deltaTime);
         }
     }
     
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("collision");
-        collision.gameObject.GetComponent<PlayerStats>().TakeDamage(100f);
+        collision.gameObject.GetComponent<PlayerStats>().TakeDamage(20f);
         Destroy(gameObject);
     }
 }

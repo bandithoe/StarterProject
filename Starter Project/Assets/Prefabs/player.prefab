@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5654420328828646803}
   - component: {fileID: 5654420328828646809}
   - component: {fileID: 5654420328828646805}
+  - component: {fileID: 8211266500895791604}
   m_Layer: 0
   m_Name: player
   m_TagString: P1
@@ -148,6 +149,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.4, z: 1.7}
   m_Center: {x: 0, y: 0.2, z: 0.1}
+--- !u!114 &8211266500895791604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5654420328828646815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a7c2ff71a0389349b7c0ad1faa9a841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8704500278548857117, guid: aca8b61430bbc214b9c75fa33f40ce16, type: 3}
+  shotPosition: {fileID: 5654420329710048612}
 --- !u!1 &5654420329710048613
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5654420329710048612
 Transform:
   m_ObjectHideFlags: 0
@@ -290,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2616938210833872057, guid: ee5d0d8bf3340d542a57aaa09079e2ea, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3394284601942109699, guid: ee5d0d8bf3340d542a57aaa09079e2ea, type: 3}
       propertyPath: m_RootOrder
