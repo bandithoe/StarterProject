@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8211266500895791604}
   m_Layer: 0
   m_Name: player
-  m_TagString: P1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ce77465e5f965c44b825c1c6797e5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
   currentHP: 0
 --- !u!54 &5654420328828646809
 Rigidbody:
@@ -187,7 +186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5654420329710048613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.585, y: 0.017, z: 1.369}
+  m_LocalPosition: {x: -0.59, y: 0.017, z: 1.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

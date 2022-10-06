@@ -23,7 +23,6 @@ public class Projectile : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision");
         collision.gameObject.GetComponent<PlayerStats>().TakeDamage(20f);
         Destroy(gameObject);
     }
