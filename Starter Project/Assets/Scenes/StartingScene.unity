@@ -377,8 +377,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0.25}
-  m_SizeDelta: {x: 968, y: 334.5}
+  m_AnchoredPosition: {x: -21.04309, y: -195.64532}
+  m_SizeDelta: {x: 3183.0427, y: 1914.6201}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610109193
 MonoBehaviour:
@@ -966,8 +966,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143.7851, y: 1.2376}
-  m_SizeDelta: {x: 310.9784, y: 47.5246}
+  m_AnchoredPosition: {x: -126.2153, y: 0.7199}
+  m_SizeDelta: {x: 275.8389, y: 48.5599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1688452903
 MonoBehaviour:
@@ -989,7 +989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: quackstronauts 3D
+  m_text: duckin space
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 2117438096}
   - component: {fileID: 2117438095}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: quack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1520,8 +1520,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283519364
-  m_fontColor: {r: 0.5188679, g: 0.31572622, b: 0.31572622, a: 1}
+    rgba: 4283915396
+  m_fontColor: {r: 0.5188679, g: 0.35962144, b: 0.34020114, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

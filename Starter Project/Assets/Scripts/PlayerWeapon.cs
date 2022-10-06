@@ -7,7 +7,14 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
+    public GameObject weapon;
     public Transform shotPosition;
+
+
+    void Start()
+    { 
+        weapon.SetActive(false);
+    }
 
     private void Update()
     {

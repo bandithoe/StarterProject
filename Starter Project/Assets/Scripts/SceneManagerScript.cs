@@ -15,7 +15,7 @@ public class SceneManagerScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void ReturnToMenu(int sceneNr)
+    public void Pause(int sceneNr)
     {
         SceneManager.LoadScene(sceneNr);
     }
