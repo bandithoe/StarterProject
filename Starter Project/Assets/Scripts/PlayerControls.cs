@@ -54,9 +54,7 @@ public class PlayerControls : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         switchPlayer.PlayerSwitch();
-        playerStats.currentStamina = playerStats.maxStamina;
-        //playerStats.staminaBar.fillAmount = playerStats.maxStamina / playerStats.currentStamina;
-        //playerStats.staminaBar.fillAmount = playerStats.maxStamina;
+        playerStats.staminaBar.fillAmount = playerStats.maxStamina / playerStats.currentStamina;
     }
 
     private void Sprint()

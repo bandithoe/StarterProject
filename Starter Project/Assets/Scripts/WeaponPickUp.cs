@@ -7,7 +7,7 @@ public class WeaponPickUp : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.transform.GetChild(2).GetComponent<PlayerWeapon>().ActivateWeapon();
+        other.gameObject.transform.GetChild(3).GetComponent<PlayerWeapon>().ActivateWeapon();
         Destroy(gameObject);
     }
 }
