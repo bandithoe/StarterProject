@@ -6,6 +6,9 @@ public class PickupManager : MonoBehaviour
 {
     private static PickupManager instance;
     [SerializeField] private GameObject pickupPrefab;
+    [SerializeField] private CurrentPlayerActive switchPlayer;
+    private PlayerStats playerStats;
+    
 
     private void Awake()
     {
@@ -25,11 +28,19 @@ public class PickupManager : MonoBehaviour
     }
 
     private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+    { 
+        //|| playerStats.currentStamina <= 0
+        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))
         {
+            StartCoroutine(WaitForSwitch());
             GameObject newPickup = Instantiate(pickupPrefab);
-            newPickup.transform.position = new Vector3(Random.Range(0f, 20f), 1f, Random.Range(0f, 20f));
+            newPickup.transform.position = new Vector3(Random.Range(0f, 10f), 1f, Random.Range(0f, 10f));
         }
+    }
+
+    private IEnumerator WaitForSwitch()
+    {
+        yield return new WaitForSeconds(3);
+        switchPlayer.PlayerSwitch();
     }
 }

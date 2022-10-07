@@ -6,14 +6,16 @@ using UnityEngine.SceneManagement;
 public class PlayerStats : MonoBehaviour
 {
     private float maxHP = 100f;
-
     public float currentHP;
+    public float maxStamina = 300f;
+    public float currentStamina;
 
     void Start()
     {
         currentHP = maxHP;
+        currentStamina = maxStamina;
     }
-
+    
     void Update()
     {
         PlayerDeath();

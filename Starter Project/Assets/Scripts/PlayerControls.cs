@@ -8,12 +8,18 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float speed = 0f;
     [SerializeField] private float turnSpeed;
     [SerializeField] private Rigidbody characterBody;
+    [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private float staminaUsage;
+    [SerializeField] private CurrentPlayerActive switchPlayer;
     private float horizontalInput;
     private float verticalInput;
     
-
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            enabled = false;
+        }
         Move();
         Sprint();
         Jump();
@@ -32,17 +38,35 @@ public class PlayerControls : MonoBehaviour
         if (verticalInput != 0) 
         {
             transform.Translate(Vector3.forward * (Time.deltaTime * speed * verticalInput));
+            playerStats.currentStamina -= staminaUsage;
+            
+            if (playerStats.currentStamina <= 0f)
+            {
+                enabled = false;
+                StartCoroutine(WaitForSwitch());
+                playerStats.currentStamina = playerStats.maxStamina;
+            }
+            
         }
     }
+
+    private IEnumerator WaitForSwitch()
+    {
+        yield return new WaitForSeconds(3);
+        switchPlayer.PlayerSwitch();
+    }
+
     private void Sprint()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift)) 
         {
             speed += 3f;
+            staminaUsage *= 2f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift)) 
         {
             speed -= 3f;
+            staminaUsage /= 2f;
         }   
     }
     private void Jump() 

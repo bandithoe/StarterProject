@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TeamWin.unity
     guid: 20e513d6f6bdefc44bb2ed220a467bd4
+  - enabled: 1
+    path: Assets/Scenes/TeamWin2.unity
+    guid: 8a403834e53091c488f7be07c951b508
   m_configObjects: {}

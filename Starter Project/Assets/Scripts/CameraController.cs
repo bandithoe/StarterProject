@@ -6,13 +6,10 @@ public class CameraController : MonoBehaviour
 {
     
     [SerializeField] private float _sensX;
-
     private float _mouseX;
-
     private float _yRotation;
-
     public static CameraController CamController;
-    
+
     void Start()
     {
         CamController = this;
@@ -38,5 +35,7 @@ public class CameraController : MonoBehaviour
         transform.position = CurrentPlayerActive.activePlayer.gameObject.transform.position;
         transform.rotation = CurrentPlayerActive.activePlayer.gameObject.transform.rotation;
         _yRotation = 0f;
+
+        
     }
 }

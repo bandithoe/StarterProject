@@ -19,11 +19,8 @@ public class CurrentPlayerActive : MonoBehaviour
     public PlayerWeapon weapon1;
     public PlayerWeapon weapon2;
 
-    private bool isActive;
-
     public static PlayerControls activePlayer;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         playerOneControls.enabled = true;
@@ -33,16 +30,7 @@ public class CurrentPlayerActive : MonoBehaviour
         activePlayer = playerOneControls;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            PlayerSwitch();
-        }
-    }
-
-    private void PlayerSwitch()
+    public void PlayerSwitch()
     {
         if (activePlayer != playerOneControls)
         {

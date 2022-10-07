@@ -106,6 +106,8 @@ MonoBehaviour:
   speed: 7
   turnSpeed: 300
   characterBody: {fileID: 5654420328828646809}
+  playerStats: {fileID: 5654420328828646803}
+  staminaUsage: 0.1
 --- !u!114 &5654420328828646803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: 0
+  currentStamina: 0
 --- !u!54 &5654420328828646809
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,6 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8704500278548857117, guid: aca8b61430bbc214b9c75fa33f40ce16, type: 3}
   shotPosition: {fileID: 5654420329710048612}
+  switchPlayer: {fileID: 0}
 --- !u!1 &5654420329710048613
 GameObject:
   m_ObjectHideFlags: 0
