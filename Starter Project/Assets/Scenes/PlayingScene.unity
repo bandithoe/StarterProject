@@ -624,6 +624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickupPrefab: {fileID: 9047578015802038053, guid: 883353d08b8a7654998eecf4eb23da9b, type: 3}
   switchPlayer: {fileID: 1773089429}
+  playerStats: []
 --- !u!4 &316084758
 Transform:
   m_ObjectHideFlags: 0
@@ -656,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9000569121074035119, guid: e707b1f4a4389c34e9ecd6309ed5fd7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.2
+      value: -19.1
       objectReference: {fileID: 0}
     - target: {fileID: 9000569121074035119, guid: e707b1f4a4389c34e9ecd6309ed5fd7e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1438,7 +1439,7 @@ PrefabInstance:
       objectReference: {fileID: 2088845006}
     - target: {fileID: 5654420328828646803, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: maxStamina
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5654420328828646803, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: staminaBar
@@ -2370,6 +2371,7 @@ MonoBehaviour:
   projectile2: {fileID: 588619043}
   weapon1: {fileID: 1174861490}
   weapon2: {fileID: 1079055717}
+  pickupManager: {fileID: 316084757}
 --- !u!4 &1773089430
 Transform:
   m_ObjectHideFlags: 0
@@ -2965,7 +2967,7 @@ PrefabInstance:
       objectReference: {fileID: 1290006691}
     - target: {fileID: 5654420328828646803, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: maxStamina
-      value: 150
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5654420328828646803, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: staminaBar
@@ -2993,7 +2995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5654420328828646810, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.9
+      value: -34.8
       objectReference: {fileID: 0}
     - target: {fileID: 5654420328828646810, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: m_LocalPosition.y

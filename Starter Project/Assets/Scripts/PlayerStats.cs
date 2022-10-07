@@ -38,6 +38,7 @@ public class PlayerStats : MonoBehaviour
         {
             currentHP += heal;
             currentHP = Mathf.Clamp(currentHP, 0f, maxHP);
+            healthBar.fillAmount = currentHP / maxHP;
         }
         
     }

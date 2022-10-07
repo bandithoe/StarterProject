@@ -46,8 +46,8 @@ public class PlayerControls : MonoBehaviour
                 playerStats.currentStamina = playerStats.maxStamina;
                 enabled = false;
                 StartCoroutine(WaitForSwitch());
+                playerStats.staminaBar.fillAmount = playerStats.currentStamina / playerStats.maxStamina;
             }
-            
         }
     }
 
@@ -55,6 +55,7 @@ public class PlayerControls : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         switchPlayer.PlayerSwitch();
+        
     }
 
     private void Sprint()
