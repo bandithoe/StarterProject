@@ -32,7 +32,7 @@ public class PickupManager : MonoBehaviour
     {
         // StartCoroutine(WaitForSwitch());
         GameObject newPickup = Instantiate(pickupPrefab);
-        newPickup.transform.position = new Vector3(Random.Range(0f, 10f), 1f, Random.Range(0f, 10f));
+        newPickup.transform.position = new Vector3(Random.Range(0f, 30f), 1f, Random.Range(0f, 30f));
     }
 
     // private IEnumerator WaitForSwitch()
