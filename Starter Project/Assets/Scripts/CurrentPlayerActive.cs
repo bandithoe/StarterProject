@@ -19,8 +19,9 @@ public class CurrentPlayerActive : MonoBehaviour
     public PlayerWeapon weapon1;
     public PlayerWeapon weapon2;
 
+    [SerializeField] private PickupManager pickupManager;
     public static PlayerControls activePlayer;
-    
+
     void Start()
     {
         playerOneControls.enabled = true;
@@ -54,9 +55,11 @@ public class CurrentPlayerActive : MonoBehaviour
             playerTwoControls.enabled = true;
             projectile2.enabled = true;
             weapon2.enabled = true;
-            
+
             activePlayer = playerTwoControls;
         }
+
+        pickupManager.Drop();
 
         CameraController.CamController.CameraSwitchPlayer(activePlayer.gameObject);
     }
