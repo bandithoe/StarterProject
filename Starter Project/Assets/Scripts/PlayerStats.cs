@@ -2,18 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
     private float maxHP = 100f;
     public float currentHP;
-    public float maxStamina = 300f;
+    public float maxStamina = 200f;
     public float currentStamina;
+    public Image healthBar;
+    public Image staminaBar;
 
     void Start()
     {
         currentHP = maxHP;
         currentStamina = maxStamina;
+        healthBar.fillAmount = 1f;
+        staminaBar.fillAmount = 1f;
     }
     
     void Update()
@@ -24,6 +29,7 @@ public class PlayerStats : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHP -= damage;
+        healthBar.fillAmount = currentHP / maxHP;
     }
     
     public void GetHeal(float heal)

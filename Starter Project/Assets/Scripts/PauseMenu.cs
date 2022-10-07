@@ -16,14 +16,14 @@ public class PauseMenu : MonoBehaviour
             if (gameIsPaused)
             {
                 Resume();
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                /*Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;*/
             }
             else
             {
                 Pause();
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
+                /*Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;*/
             }
         }
     }

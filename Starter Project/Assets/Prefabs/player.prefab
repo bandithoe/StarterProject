@@ -108,6 +108,7 @@ MonoBehaviour:
   characterBody: {fileID: 5654420328828646809}
   playerStats: {fileID: 5654420328828646803}
   staminaUsage: 0.1
+  switchPlayer: {fileID: 0}
 --- !u!114 &5654420328828646803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: 0
+  maxStamina: 200
   currentStamina: 0
 --- !u!54 &5654420328828646809
 Rigidbody:

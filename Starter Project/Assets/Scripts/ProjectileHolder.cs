@@ -16,7 +16,7 @@ public class ProjectileHolder : MonoBehaviour
             newBullet.transform.position = shotPosition.position;
             newBullet.transform.rotation = gameObject.transform.rotation;
             newBullet.GetComponent<Projectile>().Initialize();
-            StartCoroutine(WaitForSwitch());
+            //StartCoroutine(WaitForSwitch());
 
         }
         

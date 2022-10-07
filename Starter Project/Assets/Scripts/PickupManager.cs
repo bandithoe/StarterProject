@@ -28,9 +28,8 @@ public class PickupManager : MonoBehaviour
     }
 
     private void Update()
-    { 
-        //|| playerStats.currentStamina <= 0
-        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))
+    {
+        if (playerStats.currentStamina <= 0f || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))
         {
             StartCoroutine(WaitForSwitch());
             GameObject newPickup = Instantiate(pickupPrefab);

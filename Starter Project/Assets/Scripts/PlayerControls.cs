@@ -39,12 +39,13 @@ public class PlayerControls : MonoBehaviour
         {
             transform.Translate(Vector3.forward * (Time.deltaTime * speed * verticalInput));
             playerStats.currentStamina -= staminaUsage;
+            playerStats.staminaBar.fillAmount = playerStats.currentStamina / playerStats.maxStamina;
             
-            if (playerStats.currentStamina <= 0f)
+            if (playerStats.currentStamina <= 0f || Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse1))
             {
+                playerStats.currentStamina = playerStats.maxStamina;
                 enabled = false;
                 StartCoroutine(WaitForSwitch());
-                playerStats.currentStamina = playerStats.maxStamina;
             }
             
         }
