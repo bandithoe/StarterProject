@@ -60,7 +60,6 @@ public class CurrentPlayerActive : MonoBehaviour
         }
 
         pickupManager.Drop();
-
         CameraController.CamController.CameraSwitchPlayer(activePlayer.gameObject);
     }
 

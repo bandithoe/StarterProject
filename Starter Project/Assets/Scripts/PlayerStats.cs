@@ -42,7 +42,7 @@ public class PlayerStats : MonoBehaviour
         }
         
     }
-
+    
     void PlayerDeath()
     {
         if (currentHP <= 0 && gameObject.CompareTag("P1"))
