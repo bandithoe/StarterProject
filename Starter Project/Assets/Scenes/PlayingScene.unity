@@ -1433,6 +1433,10 @@ PrefabInstance:
       propertyPath: switchPlayer
       value: 
       objectReference: {fileID: 1773089429}
+    - target: {fileID: 5654420328515330980, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5654420328828646803, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: healthBar
       value: 
@@ -2957,6 +2961,10 @@ PrefabInstance:
       propertyPath: switchPlayer
       value: 
       objectReference: {fileID: 1773089429}
+    - target: {fileID: 3462465185657839211, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909443793696698953, guid: d29d8ef1b21076f4db7d40d8abe85f28, type: 3}
       propertyPath: weapon
       value: 
